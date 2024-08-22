@@ -30,7 +30,7 @@ function checkout() {
     let totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
     let message = `Pesanan saya:%0A${orderDetails}%0ATotal Harga: Rp ${totalPrice}`;
 
-    window.location.href = `https://wa.me/qr/XQIOFW3WJX2DI1?text=${encodeURIComponent(message)}`;
+    window.location.href = `https://wa.me/6289665119793?text=${encodeURIComponent(message)}`;
     localStorage.removeItem('cart'); // Kosongkan keranjang setelah checkout
 }
 
