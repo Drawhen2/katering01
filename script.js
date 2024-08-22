@@ -28,7 +28,8 @@ function checkout() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let orderDetails = cart.map(item => `${item.name}: Rp ${item.price}`).join('%0A');
     let totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
-    let message = `Pesanan saya:%0A${orderDetails}%0ATotal Harga: Rp ${totalPrice}`;
+    let message = `Pesanan saya: 
+    ${orderDetails}ATotal Harga: Rp ${totalPrice}`;
 
     window.location.href = `https://wa.me/6289665119793?text=${encodeURIComponent(message)}`;
     localStorage.removeItem('cart'); // Kosongkan keranjang setelah checkout
